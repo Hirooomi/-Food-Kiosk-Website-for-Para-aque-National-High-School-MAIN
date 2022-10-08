@@ -1,0 +1,18 @@
+html, body {
+    padding: 0;
+    margin: 0;
+}
+.text{
+    font-family: "Open Sans";
+    font-size: 17.3333ptx;
+    color:white;
+}
+#topbar{
+    background-color:rgb(11, 128, 67);
+    height: 48px;
+    text-align: center;
+    overflow: hidden;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
