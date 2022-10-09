@@ -16,3 +16,13 @@ function colOrex(){
         expandtopText()
     }
 }
+function openNavBar(){
+    document.getElementById("dimPane").style.display = "block"
+}
+function openDim(){
+    document.getElementById("dimPane").style.display = "block"
+}
+
+function closeDim(){
+    document.getElementById("dimPane").style.display = "none"
+}

@@ -2,16 +2,23 @@
     <head>
         <title>Research</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="styles/style.css">
+        <link rel="stylesheet" href="styles/font-faces.css">
+        <link rel="stylesheet" href="styles/animations.css">
         <script src="https://kit.fontawesome.com/6b9c8a6e93.js" crossorigin="anonymous"></script>
     </head>
     <body>
+        <div id="dimPane" onclick="closeDim()"></div>
         <div id="topBar">
             <p class="heading1" id="topText" onclick="colOrex()">PARAÑAQUE NATIONAL HIGH SCHOOL - MAIN - Home of the Gentle Warriors</p>
         </div>
         <div id="utilityBar">
-            <i class="fas fa-bars" aria-hidden="true" id="menuBar"></i>
+            <i class="fas fa-bars" aria-hidden="true" id="menuBar" onclick="openNavBar()"></i>
+            <img src="img/pnhs_logo_255px.jpg" id="pnhslogo40px" >
         </div>
-        <script src="script.js"></script>
+        <div id="navBar">
+
+        </div>
+        <script src="scripts/script.js"></script>
     </body>
 </html>
