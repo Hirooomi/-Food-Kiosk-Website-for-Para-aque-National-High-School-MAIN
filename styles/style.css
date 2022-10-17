@@ -1,6 +1,7 @@
 html, body {
     padding: 0;
     margin: 0;
+    font-family: Open Sans;
 }
 .heading1{
     font-family: Open Sans;
@@ -49,4 +50,36 @@ html, body {
     position: fixed;
     display: none;
     animation: fadeIn 0.5s;
+}
+#sideBar{
+    width: 0;
+    height: 100%;
+    position: fixed;
+    top: 48px;
+    left: 0px;
+    background-color: black;
+    display: none;
+    overflow: hidden;
+    transition: width 1s ease-in-out;
+    z-index: 4;
+}
+#sideBar a{
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 20px;
+    text-indent: 10px;
+}
+#closeSideBarButton{
+
+}
+#searchBarButton{
+    color: white;
+    float: right;
+    height: 24px;
+    width: 24px;
+    margin: 16px 12px;
+}
+#searchBarInput{
+    height: 40px;
 }
