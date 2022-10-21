@@ -1,3 +1,6 @@
+<?php 
+  session_start(); 
+?>
 <html>
     <head>
         <title>Research</title>
@@ -5,6 +8,7 @@
         <link rel="stylesheet" href="styles/style.css">
         <link rel="stylesheet" href="styles/font-faces.css">
         <link rel="stylesheet" href="styles/animations.css">
+
         <script src="https://kit.fontawesome.com/6b9c8a6e93.js" crossorigin="anonymous"></script>
     </head>
     <body>
@@ -19,13 +23,29 @@
             <a href="" id="searchBarButton"><i class="fa fa-search" aria-hidden="true" ></i></a>
         </div>
         <div id="sideBar">
-            <a id="closeSideBarButton" onclick="closeSideBar()">&times;</a>
+        <a id="closeSideBarButton" onclick="closeSideBar()">&times;</a>
+            <?php
+                if (isset($_SESSION["success"])) {
+            ?>
+                <p id="usernameText"><?php echo $_SESSION["username"]?></p>
+                <a href="logout.php">Logout</a>
+            <?php
+                }else{
+            ?>
+                <a href="login.php">Login</a>
+                <br>
+                <a href="register.php">Create Account</a>
+            <?php
+                }
+            ?>
+            
             <br>
-            <a href="">Login</a>
-            <br>
-            <a href="">Create Account</a>
-            <br>
-            <a href="">Terms and Conditions</a>
+            <a href="#tac" onclick="">Terms and Conditions</a>
+        </div>
+        <div id="tac">
+            <h1>
+            Terms and Conditions
+            </h1>
         </div>
         <script src="scripts/script.js"></script>
     </body>
