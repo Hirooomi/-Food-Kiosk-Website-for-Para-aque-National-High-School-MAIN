@@ -1,0 +1,429 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+:root {
+  --green: rgb(11, 128, 67);
+  --black: rgb(0, 0, 0);
+  --white: rgb(255, 255, 255);
+
+  --padding: 10px 15px;
+}
+
+html {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  overflow-y: scroll;
+}
+
+body,
+html {
+  width: 100vw;
+  overflow-x: hidden;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  max-width: 600px;
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+  color: var(--black);
+  font-weight: 400;
+  box-sizing: border-box;
+  position: relative;
+  outline: none;
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
+.header {
+  background-color: var(--green);
+  width: 100vw;
+  padding: var(--padding);
+}
+
+.header > p {
+  color: var(--white);
+  font-weight: 700;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: whitesmoke;
+  height: 100vh;
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: var(--black);
+  padding: var(--padding);
+}
+
+.showNavbar {
+  width: 50%;
+  min-width: 230px;
+  height: 100%;
+  position: fixed;
+  left: -70%;
+  opacity: 0;
+  transition: 0.5s;
+  z-index: 1;
+  background-color: var(--black);
+}
+
+.show {
+  left: 0%;
+  opacity: 1;
+}
+
+.tab {
+  width: 100%;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  color: var(--white);
+  padding: var(--padding);
+}
+
+.nav-icon {
+  width: 20px;
+  z-index: 2;
+  position: absolute;
+  filter: invert(100%);
+}
+
+.close {
+  width: 15px;
+}
+
+.hide {
+  visibility: hidden;
+}
+
+.nav-pnhs {
+  width: 20px;
+  margin-left: 35px;
+}
+
+/* Search */
+.search {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 2%;
+}
+
+.search > button {
+  border: none;
+  background-color: transparent;
+}
+
+.searchbar {
+  background-color: transparent;
+  border: none;
+  color: white;
+  padding: 0 3%;
+}
+
+.searchbar::placeholder {
+  color: white;
+}
+
+.bar-div {
+  width: 100%;
+  background-image: linear-gradient(#b2d5a5, #b2d5a5, #9eca88);
+  position: absolute;
+  z-index: 5;
+  justify-content: center;
+  top: -100%;
+  left: 0;
+  box-shadow: -1px 10px 200px 0px rgba(0, 0, 0, 0.75);
+  display: flex;
+  transition: top 0.5s ease-in-out;
+}
+
+.showSearchBar {
+  top: 0;
+}
+
+.bar {
+  display: flex;
+  background-color: #8dbf70;
+  padding: 2.5%;
+  border-radius: 5px;
+  width: 95%;
+  margin: 3% 0;
+}
+
+.back-icon {
+  width: 20px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.back {
+  border: none;
+  background-color: transparent;
+}
+
+.nav-search {
+  width: 20px;
+  filter: invert(100%);
+  display: flex;
+  align-items: center;
+}
+
+.back-menu {
+  background: #a5a5a5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5%;
+}
+
+.back-menu > a {
+  display: flex;
+  align-items: center;
+}
+
+.back-menu-icon {
+  width: 20px;
+  filter: invert(49%) sepia(13%) saturate(3631%) hue-rotate(186deg)
+    brightness(82%) contrast(84%);
+  margin: auto 0;
+  margin-right: 2vw;
+}
+
+.arch {
+  margin: 0 0 0 2vw;
+  filter: invert(28%) sepia(8%) saturate(725%) hue-rotate(169deg)
+    brightness(94%) contrast(89%);
+}
+
+.cart {
+  margin: 0 6vw 0 0vw;
+}
+
+.item {
+  width: 100vw;
+  display: flex;
+  padding: 5%;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.item img {
+  width: 170px;
+  height: 170px;
+  margin-bottom: 10px;
+}
+
+.item span {
+  width: 100vw;
+  text-align: center;
+}
+
+.archive {
+  display: flex;
+  justify-content: end;
+  margin: 3% 5%;
+}
+
+.archive-btn {
+  border: none;
+  background-color: #ed7d31;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+.archive-icon {
+  width: 10px;
+  filter: invert(100%);
+}
+
+.form {
+  display: flex;
+  background-color: #4472c4;
+  width: 100vw;
+  flex-direction: column;
+  align-items: center;
+}
+
+.caption {
+  width: 100vw;
+  text-align: center;
+}
+
+.variation-quantity {
+  display: flex;
+  background-color: #4472c4;
+  width: 80%;
+  justify-content: center;
+  align-items: center;
+}
+
+.variation {
+  display: flex;
+  /* flex-wrap: wrap; */
+  flex-direction: column;
+  width: 50%;
+  margin: 20px 0;
+}
+
+.cup {
+  width: 30%;
+  margin-bottom: 5px;
+}
+
+.temp {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#hot,
+#cold,
+#medium,
+#large {
+  margin: 0 10px;
+}
+
+.hot-cold {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px 0;
+}
+
+.size {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin: 5px 0;
+}
+
+.quantity {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 50%;
+  padding: 10px;
+}
+
+.qty {
+  background-color: #ffc000;
+  border-top-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border: 2px solid white;
+  padding: 0 20px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 5%;
+}
+
+.quantity-div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.minus-btn,
+.plus-btn {
+  border: none;
+  background-color: #ed7d31;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+.minus-icon,
+.plus-icon {
+  width: 10px;
+  filter: invert(100%);
+}
+
+#quantity {
+  width: 35px;
+  background-color: transparent;
+  border: none;
+  text-align: center;
+}
+
+#submit {
+  margin-top: 5%;
+  width: 30vw;
+  background-color: #70ad47;
+  color: var(--white);
+  padding: 5px 15px;
+  border: 0;
+  border-radius: 5px;
+  border: 1px solid #507e32;
+}
+
+.visible {
+  visibility: visible;
+  position: relative;
+}
+
+.hidden {
+  visibility: hidden;
+  position: absolute;
+}
+
+@media only screen and (max-width: 600px) {
+}
+
+@media only screen and (max-width: 320px) {
+  .header > p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .items {
+    padding: 2% 3%;
+  }
+}
+.notify-badge{
+  position: relative;
+  background: rgb(48, 151, 186);
+  z-index: 10;
+  top:-7px;
+  left:30px;
+  width:15px;
+  height: 15px;
+  text-align: center;
+  line-height: 1rem;;
+  font-size: 10px;
+  border-radius: 50%;
+  color:white;
+}

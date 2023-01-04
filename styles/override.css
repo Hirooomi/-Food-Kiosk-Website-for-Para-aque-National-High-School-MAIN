@@ -1,0 +1,37 @@
+
+.searchbar {
+    background-color: transparent;
+    border: none;
+    color:   var( --green)!important;
+    padding: 0 3%;
+}
+  
+.searchbar::placeholder {
+    color:   var(--green)!important;
+}
+
+.bar-div {
+    width: 100%;
+    background: var(--green)!important;
+    position: absolute;
+    z-index: 5;
+    justify-content: center;
+    top: -100%;
+    left: 0;
+    box-shadow: -1px 10px 200px 0px rgba(0, 0, 0, 0.75)!important;
+    display: flex;
+    transition: top 0.5s ease-in-out;
+}
+  
+.showSearchBar {
+    top: 0;
+  }
+  
+  .bar {
+    display: flex;
+    background-color: white!important;
+    padding: 2.5%;
+    border-radius: 5px;
+    width: 95%;
+    margin: 3% 0;
+  }

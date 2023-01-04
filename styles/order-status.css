@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+:root {
+  --green: rgb(11, 128, 67);
+  --black: rgb(0, 0, 0);
+  --white: rgb(255, 255, 255);
+
+  --padding: 10px 15px;
+}
+
+html {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  overflow-y: scroll;
+}
+
+body,
+html {
+  width: 100vw;
+  overflow-x: hidden;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  max-width: 600px;
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+  color: var(--black);
+  font-weight: 400;
+  box-sizing: border-box;
+  position: relative;
+  outline: none;
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.header {
+  background-color: var(--green);
+  width: 100vw;
+  padding: var(--padding);
+  color: var(--white);
+  font-weight: 700;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: whitesmoke;
+  height: 100vh;
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: var(--black);
+  padding: var(--padding);
+}
+
+.showNavbar {
+  width: 50%;
+  min-width: 230px;
+  height: 100%;
+  position: fixed;
+  left: -70%;
+  opacity: 0;
+  transition: 0.5s;
+  z-index: 1;
+  background-color: var(--black);
+}
+
+.show {
+  left: 0%;
+  opacity: 1;
+}
+
+.tab {
+  width: 100%;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  color: var(--white);
+  padding: var(--padding);
+}
+
+.nav-icon {
+  width: 20px;
+  z-index: 2;
+  position: absolute;
+  filter: invert(100%);
+}
+
+.close {
+  width: 15px;
+}
+
+.hide {
+  visibility: hidden;
+}
+
+.nav-pnhs {
+  width: 20px;
+  margin-left: 35px;
+}
+
+/* Search */
+.search {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 2%;
+}
+
+.search > button {
+  border: none;
+  background-color: transparent;
+}
+
+.searchbar {
+  background-color: transparent;
+  border: none;
+  color: white;
+  padding: 0 3%;
+}
+
+.searchbar::placeholder {
+  color: white;
+}
+
+.bar-div {
+  width: 100%;
+  background-image: linear-gradient(#b2d5a5, #b2d5a5, #9eca88);
+  position: absolute;
+  z-index: 5;
+  justify-content: center;
+  top: -100%;
+  left: 0;
+  box-shadow: -1px 10px 200px 0px rgba(0, 0, 0, 0.75);
+  display: flex;
+  transition: top 0.5s ease-in-out;
+}
+
+.showSearchBar {
+  top: 0;
+}
+
+.bar {
+  display: flex;
+  background-color: #8dbf70;
+  padding: 2.5%;
+  border-radius: 5px;
+  width: 95%;
+  margin: 3% 0;
+}
+
+.back-icon {
+  width: 20px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.back {
+  border: none;
+  background-color: transparent;
+}
+
+.nav-search {
+  width: 20px;
+  filter: invert(100%);
+  display: flex;
+  align-items: center;
+}
+
+.back-home {
+  background: #a5a5a5;
+  display: flex;
+  align-items: center;
+  padding: 1.5%;
+}
+
+.back-home > a {
+  display: flex;
+  align-items: center;
+}
+
+.back-home-icon {
+  width: 20px;
+  filter: invert(49%) sepia(13%) saturate(3631%) hue-rotate(186deg)
+    brightness(82%) contrast(84%);
+  margin: auto 0;
+  margin-right: 2vw;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  margin: 10% 25%;
+}
+
+.buttons > button {
+  background-color: #ffc000;
+  border-top-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border: 1px solid #bc8c00;
+  text-align: center;
+  padding: 5px 20px;
+  margin: 10% 0;
+}
+
+.buttons > button:active {
+  background-color: #ffcb30;
+  transition: all;
+}
+
+@media only screen and (max-width: 600px) {
+}
+
+@media only screen and (max-width: 320px) {
+  .header {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
